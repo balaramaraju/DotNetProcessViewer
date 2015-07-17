@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1BA51720-8AAE-47AA-8DAC-C14FE86E3985}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DebugEngine</RootNamespace>
+    <AssemblyName>DebugEngine</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>obj\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ISymWrapper" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\Command.cs" />
+    <Compile Include="Commands\ContollCommands.cs" />
+    <Compile Include="Commands\MDBGManager.cs" />
+    <Compile Include="Commands\Notification.cs" />
+    <Compile Include="Commands\Results.cs" />
+    <Compile Include="CLRHelperMethods.cs" />
+    <Compile Include="Debugee\DebugeeProcess.cs" />
+    <Compile Include="Debugee\ManagedCallbacks.cs" />
+    <Compile Include="Controller.cs" />
+    <Compile Include="Debugee\UserTypes.cs" />
+    <Compile Include="Debugee\Wrappers\CorAssembly.cs" />
+    <Compile Include="Debugee\Wrappers\CorBreakPoint.cs" />
+    <Compile Include="Debugee\Wrappers\CorClass.cs" />
+    <Compile Include="Debugee\Wrappers\CorDebugAppDomain.cs" />
+    <Compile Include="Debugee\Wrappers\CorFunction.cs" />
+    <Compile Include="Debugee\Wrappers\CorFunctionFrame.cs" />
+    <Compile Include="Debugee\Wrappers\CorModule.cs" />
+    <Compile Include="Debugee\Wrappers\CorProcess.cs" />
+    <Compile Include="Debugee\Wrappers\CorSourcePosition.cs" />
+    <Compile Include="Debugee\Wrappers\CorThread.cs" />
+    <Compile Include="Debugee\Wrappers\CorType.cs" />
+    <Compile Include="Debugee\Wrappers\Value\CorValue.cs" />
+    <Compile Include="Debugee\Wrappers\Value\MDGBValue.cs" />
+    <Compile Include="Debugee\Wrappers\WrapperUtil.cs" />
+    <Compile Include="DebugFacade.cs" />
+    <Compile Include="Debugee\Interfaces\ComInterfaces.cs" />
+    <Compile Include="Debugee\Interfaces\IDebugEE.cs" />
+    <Compile Include="Debugee\Interfaces\IMetadataImport.cs" />
+    <Compile Include="MetaDataUtils\MetadataFieldInfo.cs" />
+    <Compile Include="MetaDataUtils\MetaMethodInfo.cs" />
+    <Compile Include="MetaDataUtils\MetaType.cs" />
+    <Compile Include="MetaDataUtils\MetadataMgr.cs" />
+    <Compile Include="MetaDataUtils\MetaModule.cs" />
+    <Compile Include="MetaDataUtils\Utils.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TempFuncEval.cs" />
+    <Compile Include="Utilities\BreakPointException.cs" />
+    <Compile Include="ControllerStateManager.cs" />
+    <Compile Include="Utilities\CorValue2Text.cs" />
+    <Compile Include="Utilities\DebugCache.cs" />
+    <Compile Include="Utilities\HResult.cs" />
+    <Compile Include="Utilities\NativeAPI.cs" />
+    <Compile Include="Utilities\SourceFileReader.cs" />
+    <Compile Include="Utilities\WindowsImports.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,8 @@
+D:\Personal\CockPit\DebugEngine\Controller\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Personal\CockPit\DebugEngine\Controller\bin\Debug\Controller.exe.config
+D:\Personal\CockPit\DebugEngine\Controller\bin\Debug\Controller.exe
+D:\Personal\CockPit\DebugEngine\Controller\bin\Debug\Controller.pdb
+D:\Personal\CockPit\DebugEngine\Controller\bin\Debug\DebugEngine.dll
+D:\Personal\CockPit\DebugEngine\Controller\obj\x86\Debug\Controller.exe
+D:\Personal\CockPit\DebugEngine\Controller\obj\x86\Debug\Controller.pdb
+D:\Personal\CockPit\DebugEngine\Controller\bin\Debug\DebugEngine.pdb
